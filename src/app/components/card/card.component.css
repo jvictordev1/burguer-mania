@@ -5,12 +5,13 @@
   padding: 0 10px;
   transition: margin 0.3s ease-in-out;
   border: 1px solid transparent;
+  cursor: default;
 }
 img {
   height: 155px;
   width: 194px;
 }
-.container:hover {
+.hover:hover {
   border: 1px solid var(--red);
   cursor: pointer;
   margin-top: -4px;
@@ -22,6 +23,12 @@ h3 {
   font-size: var(--s-xl);
   font-weight: var(--w-bold);
   color: var(--brown);
+}
+h5 {
+  font-size: var(--s-2xl);
+  font-weight: var(--w-bold);
+  color: var(--brown);
+  margin: 0 0 20px 0;
 }
 p {
   font-size: var(--s-sm);

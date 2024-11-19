@@ -18,3 +18,13 @@ ul {
 li {
   list-style: none;
 }
+.error-container h1 {
+  font-size: var(--s-4xl);
+}
+.error-container {
+  text-align: center;
+}
+.error-container h4 {
+  font-weight: var(--w-base);
+  font-size: var(--s-medium);
+}

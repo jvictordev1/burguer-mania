@@ -24,6 +24,22 @@
     "price": 32.0
   },
   {
+    "id": 8,
+    "categoryId": 1,
+    "name": "X-Veggie",
+    "ingredients": "Pão integral, hambúrguer de lentilha, rúcula, tomate seco e pesto",
+    "description": "Uma opção saudável e deliciosa com hambúrguer de lentilha, servido com rúcula fresca, tomate seco e um molho de pesto aromático.",
+    "price": 30.0
+  },
+  {
+    "id": 9,
+    "categoryId": 1,
+    "name": "X-Rúcula",
+    "ingredients": "Pão, hambúrguer, rúcula, queijo brie e geleia de damasco",
+    "description": "Sabor sofisticado com rúcula crocante, queijo brie cremoso e um toque doce de geleia de damasco, criando um equilíbrio perfeito.",
+    "price": 38.0
+  },
+  {
     "id": 4,
     "categoryId": 2,
     "name": "X-Bacon",
@@ -40,6 +56,30 @@
     "price": 42.0
   },
   {
+    "id": 10,
+    "categoryId": 2,
+    "name": "X-Triple-Bacon",
+    "ingredients": "Pão brioche, hambúrguer, bacon triplo, queijo cheddar e maionese",
+    "description": "Explosão de sabor com bacon em tripla camada, queijo cheddar derretido e hambúrguer grelhado em um pão brioche macio.",
+    "price": 45.0
+  },
+  {
+    "id": 11,
+    "categoryId": 2,
+    "name": "X-Barbecue",
+    "ingredients": "Pão, Hambúrguer, molho barbecue, queijo prato e cebola crispy",
+    "description": "Sabor marcante com molho barbecue defumado, cebola crispy e hambúrguer suculento, finalizado com queijo prato derretido.",
+    "price": 40.0
+  },
+  {
+    "id": 12,
+    "categoryId": 2,
+    "name": "X-Picanha",
+    "ingredients": "Pão artesanal, hambúrguer de picanha, queijo coalho e molho chimichurri",
+    "description": "Delícia artesanal com hambúrguer de picanha grelhada, queijo coalho e um molho chimichurri caseiro.",
+    "price": 50.0
+  },
+  {
     "id": 6,
     "categoryId": 3,
     "name": "X-Champion",
@@ -54,5 +94,29 @@
     "ingredients": "Pão, Hambúrguer, pimenta jalapeño, queijo cheddar e maionese picante",
     "description": "Para quem gosta de algo mais apimentado: hambúrguer com jalapeños picantes, queijo cheddar e uma maionese temperada.",
     "price": 36.0
+  },
+  {
+    "id": 13,
+    "categoryId": 3,
+    "name": "X-Gorgonzola",
+    "ingredients": "Pão ciabatta, hambúrguer, queijo gorgonzola, cebola caramelizada e rúcula",
+    "description": "Gourmet e sofisticado com queijo gorgonzola, cebola caramelizada e rúcula em um pão ciabatta.",
+    "price": 45.0
+  },
+  {
+    "id": 14,
+    "categoryId": 3,
+    "name": "X-Trufa",
+    "ingredients": "Pão artesanal, hambúrguer, queijo suíço e azeite de trufas",
+    "description": "Experiência refinada com azeite de trufas, queijo suíço e hambúrguer grelhado no ponto perfeito.",
+    "price": 55.0
+  },
+  {
+    "id": 15,
+    "categoryId": 3,
+    "name": "X-Siciliano",
+    "ingredients": "Pão italiano, hambúrguer, limão siciliano, queijo parmesão e manjericão",
+    "description": "Sabores italianos com toque de limão siciliano, queijo parmesão fresco e folhas de manjericão.",
+    "price": 48.0
   }
 ]

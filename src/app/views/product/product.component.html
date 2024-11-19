@@ -1,16 +1,28 @@
-<section>
+<section *ngIf="category; else errorTemplate">
   <h1>{{ category.toUpperCase() }}</h1>
-  <ul>
+  <ul *ngIf="burguers.length > 0; else emptyCategory">
     <li *ngFor="let burguer of burguers" [id]="burguer.id">
       <app-card
         [title]="burguer.name"
         [ingredients]="burguer.ingredients"
+        (click)="handleBurguerCardClick(burguer.id)"
       ></app-card>
     </li>
   </ul>
+  <ng-template #emptyCategory>
+    <h4>Não há nenhum hambúrguer nessa categoria!</h4>
+  </ng-template>
   <app-button
     text="VER CARDÁPIO COMPLETO"
     (click)="showCompleteMenu()"
     *ngIf="burguersData.length > 3 && burguers.length !== burguersData.length"
   ></app-button>
 </section>
+<ng-template #errorTemplate>
+  <section>
+    <div class="error-container">
+      <h1 class="errorTitle">Erro</h1>
+      <h4>Desculpe! não encontramos nada relacionado a esse conteúdo :/</h4>
+    </div>
+  </section>
+</ng-template>

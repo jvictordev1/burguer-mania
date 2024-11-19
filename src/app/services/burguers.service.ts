@@ -16,4 +16,9 @@ export class BurguersService {
         map((burguers) => burguers.filter((burger) => burger.categoryId === id))
       );
   }
+  getBurguerFromId(id: number) {
+    return this.http
+      .get<IBurguers[]>(this.dbContext)
+      .pipe(map((burguers) => burguers.filter((burger) => burger.id === id)));
+  }
 }

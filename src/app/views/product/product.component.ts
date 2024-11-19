@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
 import { IBurguers } from '../../models/Burgers';
@@ -22,7 +22,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private burguersService: BurguersService,
     private categoryService: CategoriesService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
   ngOnInit(): void {
     const categoryId = this.route.snapshot.paramMap.get('id');
@@ -41,6 +42,9 @@ export class ProductComponent implements OnInit {
       .subscribe((data) => {
         this.category = data[0].name;
       });
+  }
+  handleBurguerCardClick(id: number) {
+    this.router.navigate(['details/', id]);
   }
   showCompleteMenu() {
     this.burguers = this.burguersData;

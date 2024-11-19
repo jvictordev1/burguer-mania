@@ -1,0 +1,26 @@
+<section *ngIf="burguer.name; else errorTemplate">
+  <h1>DETALHES</h1>
+  <div class="container">
+    <app-card
+      [title]="burguer!.name"
+      [ingredients]="burguer!.ingredients"
+      [price]="burguer!.price"
+      [hover]="false"
+    ></app-card>
+    <div class="container-description">
+      <h4 class="description-title">Descrição</h4>
+      <p>
+        {{ burguer.description }}
+      </p>
+    </div>
+  </div>
+  <app-button text="COMPRAR"></app-button>
+</section>
+<ng-template #errorTemplate>
+  <section>
+    <div class="error-container">
+      <h1 class="errorTitle">Erro</h1>
+      <h4>Desculpe! não encontramos nada relacionado a esse conteúdo :/</h4>
+    </div>
+  </section>
+</ng-template>
