@@ -5,7 +5,7 @@ import { ICategory } from '../models/Category';
 @Injectable({
   providedIn: 'root',
 })
-export class CategoryService {
+export class DbService {
   private dbContext = './assets/categories.json';
   constructor(private http: HttpClient) {}
   getAllCategories() {

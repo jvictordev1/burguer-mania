@@ -13,5 +13,10 @@
     "id": 3,
     "name": "X-Infarto",
     "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
+  },
+  {
+    "id": 4,
+    "name": "X-Lele",
+    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
   }
 ]

@@ -1,9 +1,20 @@
 <section>
   <h1>CARDÁPIO</h1>
   <ul>
-    <li *ngFor="let category of categories" [id]="category.id">
-      {{ category.name }}
+    <li
+      *ngFor="let category of categories; trackBy: trackByFn"
+      [id]="category.id"
+    >
+      <app-card
+        [title]="category.name"
+        [ingredients]="category.ingredients"
+        (click)="handleCategoryClick(category.id)"
+      ></app-card>
     </li>
   </ul>
-  <app-button text="VER CARDÁPIO COMPLETO"></app-button>
+  <app-button
+    text="VER CARDÁPIO COMPLETO"
+    (click)="showCompleteMenu()"
+    *ngIf="data.length > 3 && categories.length !== data.length"
+  ></app-button>
 </section>
