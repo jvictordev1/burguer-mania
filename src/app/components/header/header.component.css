@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 70px;
+}
+img {
+  width: 236px;
+  height: 56px;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 24px;
+}
+a {
+  font-family: var(--pttn-font);
+  font-weight: var(--w-semibold);
+  text-decoration: none;
+  font-size: var(--s-medium);
+  color: var(--brown);
+}
