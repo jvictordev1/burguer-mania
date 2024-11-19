@@ -1,0 +1,20 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: var(--s-3xl);
+  color: var(--red);
+}
+ul {
+  display: grid;
+  grid-template-columns: 336px 336px 336px;
+  gap: 20px;
+}
+li {
+  list-style: none;
+}

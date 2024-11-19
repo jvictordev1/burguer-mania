@@ -11,12 +11,48 @@
     "id": 2,
     "categoryId": 1,
     "name": "X-Tomate",
-    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
+    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese",
+    "description": "Clássico e simples, este hambúrguer combina um pão fresco, carne suculenta, tomate maduro, alface crocante e queijo derretido, finalizado com maionese caseira.",
+    "price": 28.0
   },
   {
     "id": 3,
     "categoryId": 1,
     "name": "X-Frutas",
-    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
+    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese",
+    "description": "Uma mistura tropical com fatias de abacaxi grelhado, toque de molho agridoce e queijo cheddar sobre um hambúrguer suculento, servido com folhas frescas de alface.",
+    "price": 32.0
+  },
+  {
+    "id": 4,
+    "categoryId": 2,
+    "name": "X-Bacon",
+    "ingredients": "Pão, Habúrguer, queijo, bacon crocante e molho especial",
+    "description": "Um clássico irresistível: bacon crocante sobre carne suculenta, acompanhado de queijo derretido e um molho especial feito na casa.",
+    "price": 38.0
+  },
+  {
+    "id": 5,
+    "categoryId": 2,
+    "name": "X-Costela",
+    "ingredients": "Pão, Hambúrguer de costela, cebola caramelizada e queijo prato",
+    "description": "Hambúrguer feito com carne de costela desfiada, combinado com cebola caramelizada e queijo prato, trazendo um sabor defumado único.",
+    "price": 42.0
+  },
+  {
+    "id": 6,
+    "categoryId": 3,
+    "name": "X-Champion",
+    "ingredients": "Pão, Hambúrguer, cogumelos, rúcula e molho de alho",
+    "description": "Hambúrguer gourmet com cogumelos frescos, rúcula e um molho de alho cremoso, servindo uma experiência sofisticada em cada mordida.",
+    "price": 40.0
+  },
+  {
+    "id": 7,
+    "categoryId": 3,
+    "name": "X-Pepper",
+    "ingredients": "Pão, Hambúrguer, pimenta jalapeño, queijo cheddar e maionese picante",
+    "description": "Para quem gosta de algo mais apimentado: hambúrguer com jalapeños picantes, queijo cheddar e uma maionese temperada.",
+    "price": 36.0
   }
 ]

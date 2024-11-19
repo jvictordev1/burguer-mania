@@ -1,1 +1,16 @@
-<p>product works!</p>
+<section>
+  <h1>{{ category.toUpperCase() }}</h1>
+  <ul>
+    <li *ngFor="let burguer of burguers" [id]="burguer.id">
+      <app-card
+        [title]="burguer.name"
+        [ingredients]="burguer.ingredients"
+      ></app-card>
+    </li>
+  </ul>
+  <app-button
+    text="VER CARDÁPIO COMPLETO"
+    (click)="showCompleteMenu()"
+    *ngIf="burguersData.length > 3 && burguers.length !== burguersData.length"
+  ></app-button>
+</section>

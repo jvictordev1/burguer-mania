@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
 import { ICategory } from '../../models/Category';
-import { DbService } from '../../services/db.service';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,14 +12,17 @@ import { DbService } from '../../services/db.service';
   imports: [ButtonComponent, CommonModule, CardComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
-  providers: [DbService],
+  providers: [CategoriesService],
 })
 export class MenuComponent implements OnInit {
   categories: ICategory[] = [];
   data: ICategory[] = [];
-  constructor(private dbService: DbService, private router: Router) {}
+  constructor(
+    private categoriesService: CategoriesService,
+    private router: Router
+  ) {}
   ngOnInit(): void {
-    this.dbService.getAllCategories().subscribe((data) => {
+    this.categoriesService.getAllCategories().subscribe((data) => {
       this.categories = data.length > 3 ? data.slice(0, 3) : data;
       this.data = data;
     });
