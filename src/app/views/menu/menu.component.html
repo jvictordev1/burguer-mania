@@ -1,1 +1,9 @@
-<p>menu works!</p>
+<section>
+  <h1>CARDÁPIO</h1>
+  <ul>
+    <li *ngFor="let category of categories" [id]="category.id">
+      {{ category.name }}
+    </li>
+  </ul>
+  <app-button text="VER CARDÁPIO COMPLETO"></app-button>
+</section>

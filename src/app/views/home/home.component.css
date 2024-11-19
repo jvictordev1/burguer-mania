@@ -14,16 +14,3 @@ div {
   display: flex;
   gap: 45px;
 }
-a {
-  font-weight: var(--w-semibold);
-  font-size: var(--s-medium);
-  text-decoration: none;
-  background-color: var(--red);
-  padding: 16px 32px;
-  color: var(--bg-white);
-}
-#menu {
-  background-color: transparent;
-  color: var(--brown);
-  border: 1px solid var(--red);
-}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "X-Vegan",
+    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
+  },
+  {
+    "id": 2,
+    "name": "X-Fitnnes",
+    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
+  },
+  {
+    "id": 3,
+    "name": "X-Infarto",
+    "ingredients": "Pão, Habúrguer, alface, tomate, queijo e maionese"
+  }
+]

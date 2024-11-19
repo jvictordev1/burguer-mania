@@ -1,0 +1,17 @@
+button {
+  font-weight: var(--w-semibold);
+  font-size: var(--s-medium);
+  text-decoration: none;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+}
+.primary {
+  background-color: var(--red);
+  color: var(--bg-white);
+}
+.secondary {
+  background-color: transparent;
+  color: var(--brown);
+  border: 1px solid var(--red);
+}
