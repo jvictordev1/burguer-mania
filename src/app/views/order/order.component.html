@@ -1,0 +1,43 @@
+<section>
+  <h1>PEDIDO</h1>
+  <form>
+    <div
+      *ngFor="let item of items; let i = index; trackBy: trackByIndex"
+      class="inputs-container"
+    >
+      <app-input-container
+        label="Produto"
+        name="product"
+        [(ngModel)]="item.product"
+        required="true"
+      ></app-input-container>
+      <app-input-container
+        label="Quantidade"
+        name="quantity"
+        required="true"
+      ></app-input-container>
+      <button
+        *ngIf="i > 0"
+        type="button"
+        class="delete-button"
+        (click)="handleDeleteItem(i)"
+      >
+        🗑️
+      </button>
+    </div>
+    <app-textarea-container
+      label="Observação"
+      name="observation"
+      required="true"
+    ></app-textarea-container>
+    <div class="buttons-container">
+      <app-button
+        text="ADICIONAR ITEM"
+        type="button"
+        variant="secondary"
+        (click)="handleAddNewItem()"
+      ></app-button>
+      <app-button text="FINALIZAR" type="submit"></app-button>
+    </div>
+  </form>
+</section>

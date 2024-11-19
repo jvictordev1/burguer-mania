@@ -1,0 +1,19 @@
+.required {
+  color: var(--red);
+}
+label {
+  font-size: var(--s-sm);
+  font-weight: var(--w-base);
+}
+input {
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  height: 30px;
+  font-family: var(--pttn-font);
+  font-size: var(--s-sm);
+}
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,0 +1,41 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  gap: 16px;
+  margin-top: 40px;
+}
+h1 {
+  font-size: var(--s-3xl);
+  color: var(--red);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--light-gray);
+  padding: 40px;
+  width: 600px;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+div {
+  display: flex;
+}
+.inputs-container {
+  gap: 40px;
+}
+app-button {
+  align-self: center;
+}
+.buttons-container {
+  justify-content: center;
+  gap: 14px;
+}
+.delete-button {
+  font-size: var(--s-lg);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  align-self: self-end;
+}
