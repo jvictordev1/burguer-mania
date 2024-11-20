@@ -2,7 +2,7 @@
   <h1>PEDIDO</h1>
   <form>
     <div
-      *ngFor="let item of items; let i = index; trackBy: trackByIndex"
+      *ngFor="let item of items; let i = index; trackBy: trackById"
       class="inputs-container"
     >
       <app-input-container
@@ -20,7 +20,7 @@
         *ngIf="i > 0"
         type="button"
         class="delete-button"
-        (click)="handleDeleteItem(i)"
+        (click)="handleDeleteItem(item.id)"
       >
         🗑️
       </button>

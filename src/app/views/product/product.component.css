@@ -28,3 +28,6 @@ li {
   font-weight: var(--w-base);
   font-size: var(--s-medium);
 }
+h4 {
+  font-size: var(--s-xl);
+}

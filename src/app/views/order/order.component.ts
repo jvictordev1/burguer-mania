@@ -19,14 +19,14 @@ import { TextareaContainerComponent } from '../../components/textarea-container/
   styleUrl: './order.component.css',
 })
 export class OrderComponent {
-  items = [{ product: '', quantity: '' }];
+  items = [{ id: 0, product: '', quantity: '' }];
   handleAddNewItem() {
-    this.items.push({ product: '', quantity: '' });
+    this.items.push({ id: this.items.length + 1, product: '', quantity: '' });
   }
-  handleDeleteItem(index: number) {
-    this.items.splice(index, 1);
+  handleDeleteItem(id: number) {
+    this.items = this.items.filter((i) => i.id !== id);
   }
-  trackByIndex(index: number): number {
-    return index;
+  trackById(index: number, item: any): number {
+    return item.id;
   }
 }
