@@ -1,20 +1,40 @@
 <nav>
   <img src="assets/logo.png" alt="BurgerMania Logo" />
-  <ul>
+  <ul class="nav-list">
     <li>
       <a routerLink="/" routerLinkActive="active">Início</a>
     </li>
     <li>
-      <a href="#">Categoria</a>
+      <a routerLink="menu" routerLinkActive="active">Categoria</a>
     </li>
     <li>
       <a routerLink="menu" routerLinkActive="active">Cardápio</a>
     </li>
     <li>
-      <a href="#">Localização</a>
+      <a href="">Localização</a>
     </li>
     <li>
-      <a href="#">Contato</a>
+      <a href="">Contato</a>
     </li>
   </ul>
+  <div class="dropdown">
+    <span (click)="handleMenuClick()">Menu</span>
+    <ul class="menu-list" [ngClass]="hidden ? 'hidden' : ''">
+      <li>
+        <a routerLink="/" routerLinkActive="active">Início</a>
+      </li>
+      <li>
+        <a href="#">Categoria</a>
+      </li>
+      <li>
+        <a routerLink="menu" routerLinkActive="active">Cardápio</a>
+      </li>
+      <li>
+        <a href="#">Localização</a>
+      </li>
+      <li>
+        <a href="#">Contato</a>
+      </li>
+    </ul>
+  </div>
 </nav>

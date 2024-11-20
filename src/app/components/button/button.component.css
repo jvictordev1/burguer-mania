@@ -19,3 +19,14 @@ button:disabled {
   background-color: var(--light-gray);
   cursor: not-allowed;
 }
+@media (max-width: 768px) {
+  button {
+    font-size: var(--s-sm);
+    padding: 16px 14px;
+  }
+}
+@media (max-width: 768px) {
+  button {
+    font-size: var(--s-2sm);
+  }
+}

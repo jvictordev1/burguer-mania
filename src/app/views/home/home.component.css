@@ -14,3 +14,25 @@ div {
   display: flex;
   gap: 45px;
 }
+@media (max-width: 768px) {
+  img {
+    height: 350px;
+    width: 680px;
+  }
+}
+@media (max-width: 600px) {
+  img {
+    height: 280px;
+    width: 520px;
+  }
+  div {
+    display: flex;
+    gap: 24px;
+  }
+}
+@media (max-width: 500px) {
+  img {
+    height: 200px;
+    width: 360px;
+  }
+}

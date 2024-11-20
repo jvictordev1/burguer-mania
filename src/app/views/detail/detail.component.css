@@ -42,3 +42,14 @@ p {
   font-weight: var(--w-base);
   font-size: var(--s-medium);
 }
+@media (max-width: 1280px) {
+  .container {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .container-description {
+    width: 90%;
+  }
+}

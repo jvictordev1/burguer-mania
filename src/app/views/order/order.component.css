@@ -39,3 +39,14 @@ app-button {
   border: none;
   align-self: self-end;
 }
+@media (max-width: 768px) {
+  form {
+    width: 70%;
+  }
+  .inputs-container {
+    flex-direction: column;
+  }
+  .delete-button {
+    align-self: center;
+  }
+}
