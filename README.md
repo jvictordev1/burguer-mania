@@ -1,27 +1,54 @@
 # BurguerMania
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+**Descrição do projeto**
 
-## Development server
+O BurguerMania é um sistema web desenvolvido para uma hamburgueria, onde os usuários podem explorar um cardápio interativo. O sistema permite visualizar as categorias de hambúrgueres, seus ingredientes e, ao clicar em uma categoria, mostrar os hambúrgueres dessa categoria com seus respectivos ingredientes. Quando um hambúrguer é selecionado, o usuário pode ver seu preço, descrição e optar por comprá-lo. Após clicar em "comprar", o usuário é redirecionado para a página de pedidos, onde pode preencher o nome do produto, quantidade e uma observação opcional. A aplicação é totalmente responsiva e foi criada para o projeto front-end da unidade 9 do **Restic-36**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instruções de como executar a aplicação
 
-## Code scaffolding
+Siga o passo a passo descrito abaixo para executar a aplicação. O sistema requer que a interface e o servidor de dados estejam rodando corretamente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Interface
 
-## Build
+No terminal, execute os seguintes comandos:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone o repositório:
 
-## Running unit tests
+   ```bash
+   git clone https://github.com/usuario/burguer-mania.git
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Acesse a pasta do projeto:
 
-## Running end-to-end tests
+   ```bash
+   cd burguer-mania
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Instale as dependências:
 
-## Further help
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Inicie o servidor local de desenvolvimento:
+   ```bash
+   npm start
+   ```
+
+Acesse a página da aplicação em `http://localhost:4200`.
+
+## Tecnologias utilizadas
+
+- **Typescript**
+- **HTML**
+- **CSS**
+- **Angular**
+
+## Possíveis melhorias futuras
+
+- Adicionar um sistema de login para os usuários.
+- Implementar um sistema de pagamento integrado.
+- Permitir a personalização dos hambúrgueres (escolha de ingredientes extras).
+- Adicionar avaliações e comentários dos usuários para os hambúrgueres.
+- Integrar o sistema de pedidos com uma API de entrega.
+- Adicionar suporte para múltiplos idiomas.
