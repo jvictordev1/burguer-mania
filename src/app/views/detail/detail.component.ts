@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
 import { IBurguers } from '../../models/Burgers';
@@ -25,7 +25,8 @@ export class DetailComponent implements OnInit {
   };
   constructor(
     private burguersService: BurguersService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
   ngOnInit(): void {
     const burguerId = this.route.snapshot.paramMap.get('id');
@@ -37,5 +38,10 @@ export class DetailComponent implements OnInit {
           return;
         }
       });
+  }
+  handleBuyItemClick(burguer: string) {
+    this.router.navigate(['order'], {
+      queryParams: { burguer: burguer },
+    });
   }
 }

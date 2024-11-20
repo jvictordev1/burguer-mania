@@ -14,5 +14,5 @@ export class InputContainerComponent {
   @Input() type = 'text';
   @Input() placeholder = '';
   @Input() value = '';
-  @Input() required = 'false';
+  @Input() required = false;
 }
