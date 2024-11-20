@@ -39,6 +39,10 @@ h4 {
   }
 }
 @media (max-width: 680px) {
+  h4 {
+    width: 80%;
+    text-align: center;
+  }
   ul {
     grid-template-columns: 336px;
   }
