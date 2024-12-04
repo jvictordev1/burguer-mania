@@ -24,15 +24,23 @@ No terminal, execute os seguintes comandos:
    cd burguer-mania
    ```
 
-3. Instale as dependências:
+3. Acesse o arquivo **src/environments/environment.development.ts** e modifique o campo **apiUrl** para a URL da API que você esta rodando:
+
+   ```Typescript
+      ...
+      apiUrl: URL DA API,
+      ...
+   ```
+
+4. Instale as dependências:
 
    ```bash
    npm install
    ```
 
-4. Inicie o servidor local de desenvolvimento:
+5. Inicie o servidor local de desenvolvimento:
    ```bash
-   npm start
+   ng serve
    ```
 
 Acesse a página da aplicação em `http://localhost:4200`.
@@ -50,5 +58,4 @@ Acesse a página da aplicação em `http://localhost:4200`.
 - Implementar um sistema de pagamento integrado.
 - Permitir a personalização dos hambúrgueres (escolha de ingredientes extras).
 - Adicionar avaliações e comentários dos usuários para os hambúrgueres.
-- Integrar o sistema de pedidos com uma API de entrega.
 - Adicionar suporte para múltiplos idiomas.

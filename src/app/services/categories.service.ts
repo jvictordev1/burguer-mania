@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 import { ICategory } from '../models/Category';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { ICategory } from '../models/Category';
 export class CategoriesService {
   private readonly apiUrl: string;
   constructor(private http: HttpClient) {
-    this.apiUrl = 'http://localhost:5031';
+    this.apiUrl = environment.apiUrl;
   }
   getAllCategories() {
     return this.http.get<ICategory[]>(`${this.apiUrl}/api/Category/all`);
