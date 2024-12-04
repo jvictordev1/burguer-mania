@@ -1,13 +1,14 @@
 <section>
   <h1>CARDÁPIO</h1>
-  <ul>
+  <ul *ngIf="categories.length > 0; else emptyList">
     <li
       *ngFor="let category of categories; trackBy: trackByFn"
       [id]="category.id"
     >
       <app-card
         [title]="category.name"
-        [ingredients]="category.ingredients"
+        [ingredients]="category.description"
+        [pathImage]="category.pathImage"
         (click)="handleCategoryClick(category.id)"
       ></app-card>
     </li>
@@ -17,4 +18,7 @@
     (click)="showCompleteMenu()"
     *ngIf="data.length > 3 && categories.length !== data.length"
   ></app-button>
+  <ng-template #emptyList>
+    <h4>Desculpe! não existem categorias cadastradas :/</h4>
+  </ng-template>
 </section>

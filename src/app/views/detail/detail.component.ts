@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
-import { IBurguers } from '../../models/Burgers';
-import { BurguersService } from '../../services/burguers.service';
+import { IProduct } from '../../models/Product';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-detail',
@@ -12,32 +12,33 @@ import { BurguersService } from '../../services/burguers.service';
   imports: [ButtonComponent, CardComponent, CommonModule],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css',
-  providers: [BurguersService],
+  providers: [ProductsService],
 })
 export class DetailComponent implements OnInit {
-  burguer: IBurguers = {
+  burguer: IProduct = {
     id: 0,
     categoryId: 0,
     name: '',
-    ingredients: '',
-    description: '',
+    baseDescription: '',
+    fullDescription: '',
     price: 0,
+    pathImage: '',
   };
   constructor(
-    private burguersService: BurguersService,
+    private productsService: ProductsService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
   ngOnInit(): void {
     const burguerId = this.route.snapshot.paramMap.get('id');
-    this.burguersService
-      .getBurguerFromId(Number(burguerId))
-      .subscribe((data) => {
-        if (data.length) {
-          this.burguer = data[0];
-          return;
-        }
-      });
+    this.productsService.getProductById(Number(burguerId)).subscribe({
+      next: (data) => {
+        this.burguer = data;
+      },
+      error: (error) => {
+        console.error(`Error: ${error.error.message}`);
+      },
+    });
   }
   handleBuyItemClick(burguer: string) {
     this.router.navigate(['order'], {

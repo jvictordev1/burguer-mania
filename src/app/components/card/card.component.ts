@@ -13,4 +13,5 @@ export class CardComponent {
   @Input({ required: true }) ingredients = '';
   @Input() price: number | null = null;
   @Input() hover = true;
+  @Input({ required: true }) pathImage = '';
 }

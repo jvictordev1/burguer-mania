@@ -3,14 +3,15 @@
   <div class="container">
     <app-card
       [title]="burguer!.name"
-      [ingredients]="burguer!.ingredients"
+      [ingredients]="burguer!.baseDescription"
       [price]="burguer!.price"
+      [pathImage]="burguer.pathImage"
       [hover]="false"
     ></app-card>
     <div class="container-description">
       <h4 class="description-title">Descrição</h4>
       <p>
-        {{ burguer.description }}
+        {{ burguer.fullDescription }}
       </p>
     </div>
   </div>

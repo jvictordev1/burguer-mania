@@ -1,22 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
 import { ICategory } from '../models/Category';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoriesService {
-  private dbContext = './assets/categories.json';
-  constructor(private http: HttpClient) {}
+  private readonly apiUrl: string;
+  constructor(private http: HttpClient) {
+    this.apiUrl = 'http://localhost:5031';
+  }
   getAllCategories() {
-    return this.http.get<ICategory[]>(this.dbContext);
+    return this.http.get<ICategory[]>(`${this.apiUrl}/api/Category/all`);
   }
   getCategoryById(id: number) {
-    return this.http
-      .get<ICategory[]>(this.dbContext)
-      .pipe(
-        map((categories) => categories.filter((category) => category.id === id))
-      );
+    return this.http.get<ICategory>(
+      `${this.apiUrl}/api/Category/GetCategoryById/${id}`
+    );
   }
 }

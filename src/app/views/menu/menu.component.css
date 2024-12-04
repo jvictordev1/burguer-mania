@@ -20,6 +20,9 @@ ul {
 li {
   list-style: none;
 }
+h4 {
+  font-size: var(--s-xl);
+}
 @media (max-width: 1024px) {
   ul {
     grid-template-columns: 336px 336px;
@@ -29,5 +32,9 @@ li {
 @media (max-width: 680px) {
   ul {
     grid-template-columns: 336px;
+  }
+  h4 {
+    width: 80%;
+    text-align: center;
   }
 }

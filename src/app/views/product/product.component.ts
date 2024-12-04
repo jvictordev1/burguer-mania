@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
-import { IBurguers } from '../../models/Burgers';
-import { BurguersService } from '../../services/burguers.service';
+import { IProduct } from '../../models/Product';
 import { CategoriesService } from '../../services/categories.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product',
@@ -13,34 +13,39 @@ import { CategoriesService } from '../../services/categories.service';
   imports: [CardComponent, ButtonComponent, CommonModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
-  providers: [BurguersService, CategoriesService],
+  providers: [ProductsService, CategoriesService],
 })
 export class ProductComponent implements OnInit {
   category = '';
-  burguers: IBurguers[] = [];
-  burguersData: IBurguers[] = [];
+  burguers: IProduct[] = [];
+  burguersData: IProduct[] = [];
   constructor(
-    private burguersService: BurguersService,
+    private productsService: ProductsService,
     private categoryService: CategoriesService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
   ngOnInit(): void {
     const categoryId = this.route.snapshot.paramMap.get('id');
-    this.burguersService
-      .getAllBurguersFromCategory(Number(categoryId))
-      .subscribe((data) => {
-        if (data.length > 3) {
-          this.burguers = data.slice(0, 3);
-          this.burguersData = data;
-          return;
-        }
-        this.burguers = data;
+    this.productsService
+      .getAllProductsFromCategory(Number(categoryId))
+      .subscribe({
+        next: (data) => {
+          if (data.length > 3) {
+            this.burguers = data.slice(0, 3);
+            this.burguersData = data;
+            return;
+          }
+          this.burguers = data;
+        },
+        error: (error) => {
+          console.error(error.error.message);
+        },
       });
     this.categoryService
       .getCategoryById(Number(categoryId))
       .subscribe((data) => {
-        this.category = data[0].name;
+        this.category = data.name;
       });
   }
   handleBurguerCardClick(id: number) {

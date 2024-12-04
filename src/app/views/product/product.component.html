@@ -4,7 +4,8 @@
     <li *ngFor="let burguer of burguers" [id]="burguer.id">
       <app-card
         [title]="burguer.name"
-        [ingredients]="burguer.ingredients"
+        [ingredients]="burguer.baseDescription"
+        [pathImage]="burguer.pathImage"
         (click)="handleBurguerCardClick(burguer.id)"
       ></app-card>
     </li>

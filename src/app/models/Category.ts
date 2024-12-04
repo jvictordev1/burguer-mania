@@ -1,5 +1,6 @@
 export interface ICategory {
   id: number;
   name: string;
-  ingredients: string;
+  description: string;
+  pathImage: string;
 }

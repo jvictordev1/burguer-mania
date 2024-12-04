@@ -22,9 +22,12 @@ export class MenuComponent implements OnInit {
     private router: Router
   ) {}
   ngOnInit(): void {
-    this.categoriesService.getAllCategories().subscribe((data) => {
-      this.categories = data.length > 3 ? data.slice(0, 3) : data;
-      this.data = data;
+    this.categoriesService.getAllCategories().subscribe({
+      next: (data: ICategory[]) => {
+        this.categories = data.length > 3 ? data.slice(0, 3) : data;
+        this.data = data;
+      },
+      error: (error) => console.log(`Error: ${error.error}`),
     });
   }
   trackByFn(index: number, category: ICategory): number {
