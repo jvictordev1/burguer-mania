@@ -40,9 +40,9 @@ export class DetailComponent implements OnInit {
       },
     });
   }
-  handleBuyItemClick(burguer: string) {
+  handleBuyItemClick() {
     this.router.navigate(['order'], {
-      queryParams: { burguer: burguer },
+      queryParams: { burguer: JSON.stringify(this.burguer) },
     });
   }
 }

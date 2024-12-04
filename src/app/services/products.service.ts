@@ -20,4 +20,9 @@ export class ProductsService {
       `${this.apiUrl}/api/Products/GetProductById/${id}`
     );
   }
+  getProductByName(name: string) {
+    return this.http.get<IProduct>(
+      `${this.apiUrl}/api/Products/GetProductByName/${name}`
+    );
+  }
 }

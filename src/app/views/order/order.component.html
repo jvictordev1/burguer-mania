@@ -2,24 +2,22 @@
   <h1>PEDIDO</h1>
   <form #orderForm="ngForm" (ngSubmit)="handleOrderSubmit(orderForm)">
     <div
-      *ngFor="let item of order.items; let i = index; trackBy: trackById"
+      *ngFor="let item of order.products; let i = index; trackBy: trackById"
       class="inputs-container"
     >
       <app-input-container
         label="Produto"
         name="product{{ item.id }}"
-        [(ngModel)]="item.product"
+        [(ngModel)]="item.name"
         ngDefaultControl
-        #productCtrl="ngModel"
         [value]="orderBurguer && i === 0 ? orderBurguer : ''"
         [required]="true"
       ></app-input-container>
       <app-input-container
         label="Quantidade"
         name="quantity{{ item.id }}"
-        [(ngModel)]="item.quantity"
+        [(ngModel)]="item.amount"
         ngDefaultControl
-        #quantityControl="ngModel"
         [required]="true"
       ></app-input-container>
       <button
@@ -34,7 +32,7 @@
     <app-textarea-container
       label="Observação"
       name="observation"
-      [(ngModel)]="order.observation"
+      [(ngModel)]="order.description"
       ngDefaultControl
     ></app-textarea-container>
     <div class="buttons-container">

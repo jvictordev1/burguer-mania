@@ -1,12 +1,14 @@
 <div>
-  <label [for]="name"
-    >{{ label }} <span class="required" *ngIf="required">*</span></label
-  >
+  <label [for]="name">
+    {{ label }} <span class="required" *ngIf="required">*</span>
+  </label>
   <input
     [name]="name"
     [type]="type"
     [placeholder]="placeholder"
     [value]="value"
-    [required]="required"
+    (input)="handleInput($event)"
+    (blur)="onTouched()"
+    required
   />
 </div>
