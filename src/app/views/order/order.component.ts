@@ -47,7 +47,7 @@ export class OrderComponent implements OnInit {
     }[];
     description: string;
   } = {
-    statusId: 5,
+    statusId: 2,
     userId: 1,
     value: 0,
     products: [
@@ -102,7 +102,7 @@ export class OrderComponent implements OnInit {
       value: number;
       products: { id: number; amount: number }[];
     } = {
-      statusId: 5,
+      statusId: 2,
       userId: 1,
       description: '',
       value: 0,
